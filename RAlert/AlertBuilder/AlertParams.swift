@@ -25,7 +25,7 @@ class AlertParams: NSObject {
     //取消闭包
     var cancelHandler : ((UIAlertAction) -> Swift.Void)?
     
-    init(context : ViewController) {
+    init(context : UIViewController) {
         super.init()
         self.context = context
         

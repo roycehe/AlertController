@@ -12,7 +12,7 @@ class AlertBuilder: NSObject {
     
     var params : AlertParams?
     
-    init(context : ViewController) {
+    init(context : UIViewController) {
         super.init()
         params = AlertParams(context: context)
         self.params?.context = context

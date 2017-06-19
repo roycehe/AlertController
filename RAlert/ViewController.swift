@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        var car = "Benz"
+        let closure = { [car] in
+            print("I drive \(car)")
+        }
+        car = "Tesla" 
+        closure()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +33,13 @@ class ViewController: UIViewController {
              print("确定")
         }).build().showController()
     }
-
+    func add(_ num: Int) -> (Int) -> Int {
+        return { a in
+            return num + a
+        }
+    }
+    
+   
 
 }
 
